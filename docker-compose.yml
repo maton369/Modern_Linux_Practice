@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  modernlinux:
+    build: .
+    container_name: modern-linux
+    privileged: true
+    stdin_open: true
+    tty: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - ./scripts:/scripts  
